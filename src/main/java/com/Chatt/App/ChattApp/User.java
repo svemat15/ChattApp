@@ -1,10 +1,18 @@
 package com.Chatt.App.ChattApp;
 
+import javax.validation.constraints.Past;
+import javax.validation.constraints.Size;
 import java.util.Date;
 
 public class User {
+
+
     private Integer id;
+
+    @Size(min=3, message = "Name need to be longer the 3 characters")
     private String name;
+
+    @Past
     private Date birthDate;
 
     protected User(){
